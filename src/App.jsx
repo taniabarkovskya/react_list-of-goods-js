@@ -31,12 +31,12 @@ export const App = () => {
       case SORT_BY_LENGTH:
         return good1.length - good2.length;
       default:
-        return '';
+        return 0;
     }
   });
 
   if (reversed) {
-    visibleGoods = visibleGoods.toReversed();
+    visibleGoods = [...visibleGoods].reverse();
   }
 
   return (
